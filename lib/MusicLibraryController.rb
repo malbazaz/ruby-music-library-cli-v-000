@@ -40,7 +40,7 @@ class MusicLibraryController
   
   def list_artists
      @sorted_array = []
-      Song.all
+      Artist.all
      @sorted_array = Artist.all.sort do |first_item, second_item|
          first_item.artist <=> second_item.artist 
       end 
