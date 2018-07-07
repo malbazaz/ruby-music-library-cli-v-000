@@ -63,5 +63,9 @@ class MusicLibraryController
        puts "#{index}. #{item.name}"
       end
   end 
+  
+  def list_songs_by_artist 
+    
+  end 
  
 end 
