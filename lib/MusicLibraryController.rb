@@ -72,9 +72,9 @@ class MusicLibraryController
     if song.artist.name == answer 
       @songs1 << song 
     end
-     binding.pry
+     #binding.pry
   end
-     
+     @songs1
   end 
  
 end 
