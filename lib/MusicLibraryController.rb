@@ -67,10 +67,10 @@ class MusicLibraryController
   def list_songs_by_artist 
     puts "Please enter the name of an artist:"
     answer = gets.split 
-  @artists = []
+  @songs1 = []
   Song.all.collect do |song|
-    if artist.name == answer 
-      @artists << artist 
+    if song.artist.name == answer 
+      @songs1 << song 
     end 
   end
      binding.pry 
