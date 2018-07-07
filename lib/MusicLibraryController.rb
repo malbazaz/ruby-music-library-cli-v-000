@@ -26,46 +26,29 @@ class MusicLibraryController
   end 
   
   def list_songs
-      @sorted_array = []
+     @sorted_array = []
       Song.all
      @sorted_array = Song.all.sort do |first_item, second_item|
          first_item.name <=> second_item.name 
-         # @names <<  Song.new_from_filename(item).name
-        end 
-        
+      end 
+    
      @sorted_array.each_with_index do |item, index|
        index+=1 
        puts "#{index}. #{item.artist.name} - #{item.name} - #{item.genre.name}"
-     end 
-      
-     # @new_object = []
-      ##   @song_object.each do |object|
-        #    if object.include?(item)
-         #     @new_object << object 
-          #  end 
-          #nd 
-        #end 
-       # @new_object.each_with_index do |object, index|
-       #   index+=1 
-       #   puts "#{index}. #{object.gsub!(".mp3","")}"
-      #  end
-      end 
+      end
+    end 
   
   def list_artists
-      @artists = []
-        @song_object.each do |item|
-          new_item = []
-        
-         new_item = item.split(" - ")
-       
-         @artists << new_item[0]
-        end 
-        @artists = @artists.sort.uniq!
-      
-        @artists.each_with_index do |object, index|
-          index+=1 
-          puts "#{index}. #{object}"
-        end
+     @sorted_array = []
+      Song.all
+     @sorted_array = Song.all.sort do |first_item, second_item|
+         first_item.artist <=> second_item.artist 
       end 
+    @sorted_array = @sorted_array.uniq!
+     @sorted_array.each_with_index do |item, index|
+       index+=1 
+       puts "#{index}. #{item.artist.name}"
+      end
+    end 
  
 end 
