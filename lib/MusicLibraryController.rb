@@ -42,7 +42,7 @@ class MusicLibraryController
      @sorted_array = []
       Artist.all
      @sorted_array = Artist.all.sort do |first_item, second_item|
-         first_item.artist <=> second_item.artist 
+         first_item <=> second_item
       end 
     @sorted_array = @sorted_array.uniq!
      @sorted_array.each_with_index do |item, index|
