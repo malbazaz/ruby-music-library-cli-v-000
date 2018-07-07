@@ -65,7 +65,9 @@ class MusicLibraryController
   end 
   
   def list_songs_by_artist 
-    
+    puts "Please enter the name of an artist:"
+    answer = gets.split 
+    answer.list_songs 
   end 
  
 end 
