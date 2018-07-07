@@ -72,7 +72,7 @@ class MusicLibraryController
     if song.artist.name == answer 
       @songs1 << song 
     end
-     binding.pry
+     #binding.pry
   end
   @sorted_songs =  @songs1.sort do |first_item, second_item|
          first_item.name <=> second_item.name
