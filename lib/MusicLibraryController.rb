@@ -74,7 +74,13 @@ class MusicLibraryController
     end
      #binding.pry
   end
-     @songs1
+  @sorted_songs =  @songs1.sort do |first_item, second_item|
+         first_item.name <=> second_item.name
+      end 
+  @sorted_songs.each_with_index do |item, index|
+       index+=1 
+       puts "#{index}. #{item.artist.name} - #{item.name} - #{item.genre.name}"
+      end
   end 
  
 end 
