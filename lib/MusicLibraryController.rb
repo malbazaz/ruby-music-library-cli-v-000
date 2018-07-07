@@ -48,8 +48,11 @@ class MusicLibraryController
      @sorted_array.each_with_index do |item, index|
        index+=1 
        puts "#{index}. #{item.name}"
-       
       end
-    end 
+    end
+    
+  def list_genres 
+    
+  end 
  
 end 
