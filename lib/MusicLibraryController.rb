@@ -69,7 +69,7 @@ class MusicLibraryController
     answer = gets.split 
     
     if list_songs.include?(answer)
-      puts 
+    
     end 
      # binding.pry 
   end 
