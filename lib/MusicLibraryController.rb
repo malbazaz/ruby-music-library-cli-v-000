@@ -66,7 +66,7 @@ class MusicLibraryController
   
   def list_songs_by_artist 
     puts "Please enter the name of an artist:"
-    answer = gets 
+    answer = gets.
   @songs1 = []
   Song.all.collect do |song|
     if song.artist.name == answer 
