@@ -68,7 +68,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     answer = gets.split 
   @artists = []
-  Artist.all.collect do |artist|
+  Song.all.collect do |song|
     if artist.name == answer 
       @artists << artist 
     end 
