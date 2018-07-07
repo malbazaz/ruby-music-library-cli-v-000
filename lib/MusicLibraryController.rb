@@ -44,6 +44,7 @@ class MusicLibraryController
      @sorted_array = Artist.all.sort do |first_item, second_item|
          first_item.name <=> second_item.name
       end 
+      binding.pry 
     @sorted_array = @sorted_array.uniq!
      @sorted_array.each_with_index do |item, index|
        index+=1 
