@@ -68,9 +68,7 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     answer = gets.split 
     
-    if list_songs.each_with_index()
-    
-    end 
+  
      # binding.pry 
   end 
  
