@@ -68,7 +68,9 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     answer = gets.split 
     
-      list_songs
+    if list_songs.include?(answer)
+      puts 
+    end 
       binding.pry 
   end 
  
