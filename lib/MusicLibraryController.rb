@@ -47,7 +47,7 @@ class MusicLibraryController
     @sorted_array = @sorted_array.uniq!
      @sorted_array.each_with_index do |item, index|
        index+=1 
-       puts "#{index}. #{item.artist.name}"
+       puts "#{index}. #{item.name}"
       end
     end 
  
