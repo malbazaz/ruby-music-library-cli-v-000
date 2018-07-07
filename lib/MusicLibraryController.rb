@@ -71,8 +71,8 @@ class MusicLibraryController
   Song.all.collect do |song|
     if song.artist.name == answer 
       @songs1 << song 
-       binding.pry
-    end 
+    end
+     binding.pry
   end
      
   end 
