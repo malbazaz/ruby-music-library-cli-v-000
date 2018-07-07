@@ -52,7 +52,16 @@ class MusicLibraryController
     end
     
   def list_genres 
-    
+      @sorted_array = []
+      Genre.all
+     @sorted_array = Genre.all.sort do |first_item, second_item|
+         first_item.name <=> second_item.name
+      end 
+    @sorted_array = @sorted_array.uniq
+     @sorted_array.each_with_index do |item, index|
+       index+=1 
+       puts "#{index}. #{item.name}"
+      end
   end 
  
 end 
